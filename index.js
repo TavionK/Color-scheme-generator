@@ -20,7 +20,6 @@ getColorsBtn.addEventListener('click',function(e){
         .then(data => {
             for (const c in data.colors){
                 colorsArr.push(data.colors[c].hex.value)
-                //console.log(typeof(data.colors[c].hex.value))
             }
             renderColors()
         })

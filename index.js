@@ -44,8 +44,6 @@ function render(){
             colorSection.innerHTML = colorsHtml
             changeBoxColors()
         })
-    
-
 }
 
 render()

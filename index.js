@@ -2,6 +2,7 @@ const baseUrl = 'https://www.thecolorapi.com/scheme'
 const getColorsBtn = document.getElementById('get-colors-btn')
 const colorModeSelector = document.getElementById('color-mode-selector')
 const colorPicker = document.getElementById('color-picker')
+const colorSection = document.getElementById('color-section')
 
 let colorsArr = []
 
@@ -11,30 +12,7 @@ document.addEventListener('click', function(e){
     }
 })
 
-getColorsBtn.addEventListener('click',function(e){
-    colorsArr = []
-    const hex = colorPicker.value.replace("#", "")
-    const url = baseUrl + `?hex=${hex}&mode=${colorModeSelector.value}`
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            for (const c in data.colors){
-                colorsArr.push(data.colors[c].hex.value)
-            }
-            renderColors()
-        })
-})
-
-function getColorsHtml(){
-    const colorsHtml = colorsArr.map(function(color, index){
-        return `
-        <div class="color-column">
-            <div class="color-box" data-hex="${color}" id="box-${index}"></div>
-            <p data-hex="${color}" class="hex-color">${color}</p>
-        </div>`
-    })
-    return colorsHtml.join('')
-}
+getColorsBtn.addEventListener('click',render)
 
 function changeBoxColors(){
     let i = 0
@@ -44,7 +22,29 @@ function changeBoxColors(){
     }
 }
 
-function renderColors(){
-    document.getElementById("color-section").innerHTML = getColorsHtml()
-    changeBoxColors()
+function render(){
+    colorsArr = []
+    let colorsHtml = ""
+    const hex = colorPicker.value.replace("#", "")
+    const url = baseUrl + `?hex=${hex}&mode=${colorModeSelector.value}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            for (const c in data.colors){
+                colorsArr.push(data.colors[c].hex.value)
+            }
+            colorsHtml = colorsArr.map(function(color, index){
+                return `
+                <div class="color-column">
+                <div class="color-box" data-hex="${color}" id="box-${index}"></div>
+                <p data-hex="${color}" class="hex-color">${color}</p>
+                </div>`
+            }).join("")
+            colorSection.innerHTML = colorsHtml
+            changeBoxColors()
+        })
+    
+
 }
+
+render()

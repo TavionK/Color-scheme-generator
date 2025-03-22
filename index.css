@@ -33,6 +33,7 @@ body{
     padding: 10px 15px;
     height: 4vh;
     width: 40vw;
+    cursor: pointer;
 }
 
 .btn{

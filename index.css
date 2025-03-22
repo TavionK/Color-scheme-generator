@@ -53,6 +53,7 @@ body{
 .hex-color{
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 button{

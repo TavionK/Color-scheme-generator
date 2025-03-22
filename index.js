@@ -4,6 +4,13 @@ const colorModeSelector = document.getElementById('color-mode-selector')
 const colorPicker = document.getElementById('color-picker')
 
 let colorsArr = []
+
+document.addEventListener('click', function(e){
+    if (e.target.dataset.hex){
+        navigator.clipboard.writeText(e.target.dataset.hex)
+    }
+})
+
 getColorsBtn.addEventListener('click',function(e){
     colorsArr = []
     const hex = colorPicker.value.replace("#", "")
@@ -24,7 +31,7 @@ function getColorsHtml(){
         return `
         <div class="color-column">
             <div class="color-box" id="box-${index}"></div>
-            <p class="hex-color">${color}</p>
+            <p data-hex="${color}" class="hex-color">${color}</p>
         </div>`
     })
     return colorsHtml.join('')

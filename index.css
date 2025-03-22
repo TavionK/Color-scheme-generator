@@ -15,8 +15,10 @@ body{
 
 .color-picker{
     height: 4vh;
+    width: 4vh;
     border-radius: 0px;
     border: none;
+    padding: 1px 3px;
 }
 
 .select-menu{

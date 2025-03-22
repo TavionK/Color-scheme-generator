@@ -9,6 +9,7 @@ let colorsArr = []
 document.addEventListener('click', function(e){
     if (e.target.dataset.hex){
         navigator.clipboard.writeText(e.target.dataset.hex)
+        alert("Copied " + e.target.dataset.hex + " to clipboard")
     }
 })
 

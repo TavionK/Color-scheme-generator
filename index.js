@@ -4,10 +4,15 @@ const colorModeSelector = document.getElementById('color-mode-selector')
 const colorPicker = document.getElementById('color-picker')
 
 getColorsBtn.addEventListener('click',function(e){
+    let colorsArr = []
     const hex = colorPicker.value.replace("#", "")
     const url = baseUrl + `?hex=${hex}&mode=${colorModeSelector.value}`
     console.log(url)
     fetch(url)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            for (const c in data.colors){
+                colorsArr.push(data.colors[c].hex.value)
+            }
+        })
 })

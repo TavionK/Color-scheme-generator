@@ -7,10 +7,13 @@ body{
 }
 
 .controls{
+    max-width: max-content;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    column-gap: 2vw;
     padding: 20px;
+    margin: 0 auto;
 }
 
 .color-picker{

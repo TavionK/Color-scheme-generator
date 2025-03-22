@@ -20,16 +20,26 @@ getColorsBtn.addEventListener('click',function(e){
 })
 
 function getColorsHtml(){
-    const colorsHtml = colorsArr.map(function(color){
+    const colorsHtml = colorsArr.map(function(color, index){
+        console.log(index)
         return `
         <div class="color-column">
-            <div class="color-box"></div>
+            <div class="color-box" id="box-${index}"></div>
             <p class="hex-color">${color}</p>
         </div>`
     })
     return colorsHtml.join('')
 }
 
+function changeBoxColors(){
+    let i = 0
+    for (let color of colorsArr){
+        document.getElementById(`box-${i}`).style.backgroundColor = color
+        i++
+    }
+}
+
 function renderColors(){
     document.getElementById("color-section").innerHTML = getColorsHtml()
+    changeBoxColors()
 }

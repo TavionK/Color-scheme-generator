@@ -6,25 +6,28 @@ body{
     font-family: "Inter", sans-serif;
 }
 
-.container{
-    max-width: 600px;
-    margin: 0 auto;
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
 }
 
-.controls{
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+.color-picker{
+    height: 4vh;
+    border-radius: 0px;
+    border: none;
 }
 
 .select-menu{
     background-color: #1F293A;
-    color: white;
-    border: 1px solid white;
+    color: #D5D4D8;
+    border: 1px solid #D1D5DB;
     border-radius: 5px;
     font-size: 1.25rem;
     padding: 10px 15px;
+    height: 4vh;
+    width: 40vw;
 }
 
 .btn{
@@ -32,19 +35,19 @@ body{
     color: white;
     background-color: #3D4B60;
     border-radius: 5px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 10px 15px;
+    height: 4vh;
 }
 
 .color-section{
-    padding: 0 2em;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .color-box{
-    height: 50vh;
-    background-color: red;
+    height: 80vh;
 }
 
 .hex-color{

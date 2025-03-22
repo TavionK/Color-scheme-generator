@@ -21,7 +21,11 @@ getColorsBtn.addEventListener('click',function(e){
 
 function getColorsHtml(){
     const colorsHtml = colorsArr.map(function(color){
-        return `<p>${color}</p>`
+        return `
+        <div class="color-column">
+            <div class="color-box"></div>
+            <p class="hex-color">${color}</p>
+        </div>`
     })
     return colorsHtml.join('')
 }

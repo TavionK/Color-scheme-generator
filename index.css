@@ -48,6 +48,7 @@ body{
 
 .color-box{
     height: 80vh;
+    cursor: pointer;
 }
 
 .hex-color{

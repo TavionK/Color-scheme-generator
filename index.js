@@ -30,7 +30,7 @@ function getColorsHtml(){
     const colorsHtml = colorsArr.map(function(color, index){
         return `
         <div class="color-column">
-            <div class="color-box" id="box-${index}"></div>
+            <div class="color-box" data-hex="${color}" id="box-${index}"></div>
             <p data-hex="${color}" class="hex-color">${color}</p>
         </div>`
     })

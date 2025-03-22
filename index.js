@@ -21,7 +21,6 @@ getColorsBtn.addEventListener('click',function(e){
 
 function getColorsHtml(){
     const colorsHtml = colorsArr.map(function(color, index){
-        console.log(index)
         return `
         <div class="color-column">
             <div class="color-box" id="box-${index}"></div>

@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color: #1F2937;
     font-size: 1rem;
+    font-family: "Inter", sans-serif;
 }
 
 .container{
@@ -36,12 +37,13 @@ body{
 }
 
 .color-section{
-    display: flex;
-    justify-content: space-evenly;
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .color-box{
-    height: 300px;
+    height: 50vh;
     background-color: red;
 }
 

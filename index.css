@@ -34,3 +34,7 @@ body{
     font-size: 1.25rem;
     padding: 10px 15px;
 }
+
+button{
+    cursor: pointer;
+}

@@ -18,7 +18,7 @@ A single page application that generates color schemes based on a selected color
 
 ## How to Use
 
-1. Open the application in a browser: <a href="https://colors-schemes-generator.netlify.app" target="_blank">https://colors-schemes-generator.netlify.app</a>
+1. Open the application in a browser: [https://colors-schemes-generator.netlify.app](https://colors-schemes-generator.netlify.app){:target="\_blank"}
 2. Select a base color using the color input field.
 3. Use the selector to change the color scheme type (e.g., complementary, monochromatic) and explore different palette variations.
 4. Click the "Get Color Scheme" button.
@@ -27,4 +27,4 @@ A single page application that generates color schemes based on a selected color
 
 ## Acknowledgments
 
-The Color API (<a href="https://www.thecolorapi.com" target="_blank">https://www.thecolorapi.com</a>) for providing the color scheme data.
+The Color API ([https://www.thecolorapi.com](https://www.thecolorapi.com){:target="\_blank}) for providing the color scheme data.

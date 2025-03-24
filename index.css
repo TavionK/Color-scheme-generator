@@ -30,7 +30,7 @@ body{
     border: 1px solid #D1D5DB;
     border-radius: 5px;
     font-size: 1.25rem;
-    padding: 10px 15px;
+    padding: 0px 15px;
     height: 4vh;
     width: 40vw;
     cursor: pointer;
@@ -42,7 +42,7 @@ body{
     background-color: #3D4B60;
     border-radius: 5px;
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 0px 15px;
     height: 4vh;
 }
 
@@ -65,4 +65,19 @@ body{
 
 button{
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .controls{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hex-color{
+        font-size: .75rem;
+    }
+
+    .select-menu{
+        font-size: .75rem;
+    }
 }

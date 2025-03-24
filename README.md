@@ -25,6 +25,10 @@ A single page application that generates color schemes based on a selected color
 5. View the generated color scheme displayed on the page.
 6. Click on any color or its hex code value to copy the hex code to your clipboard.
 
+## Preview
+
+![Color scheme generator preview](color-scheme-gen.png)
+
 ## Acknowledgments
 
 The Color API (https://www.thecolorapi.com) for providing the color scheme data.

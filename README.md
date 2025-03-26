@@ -31,4 +31,4 @@ A single page application that generates color schemes based on a selected color
 
 ## Acknowledgments
 
-The Color API (https://www.thecolorapi.com) for providing the color scheme data.
+[The Color API](https://www.thecolorapi.com) for providing the color scheme data.
